@@ -9,9 +9,7 @@ export default function Input() {
   const [filter, setFilter] = useState("");
 
   const LOCAL_STORAGE_KEY = "saved";
-  const savedItems = JSON.parse(
-    localStorage.getItem(LOCAL_STORAGE_KEY) || "[]"
-  );
+
   //set Items
   useEffect(() => {
     if (myItems.length > 0) {
@@ -20,6 +18,9 @@ export default function Input() {
   }, [myItems]);
   //get Items
   useEffect(() => {
+    const savedItems = JSON.parse(
+      localStorage.getItem(LOCAL_STORAGE_KEY) || "[]"
+    );
     if (savedItems) {
       setMyItems(savedItems);
       setFilter("all");

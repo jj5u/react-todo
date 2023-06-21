@@ -1,4 +1,3 @@
-import "./App.css";
 import ModeSwitcher from "./ModeSwitcher";
 import Input from "./components/Input";
 

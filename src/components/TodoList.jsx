@@ -34,7 +34,7 @@ export default function TodoList({ myItems, setMyItems, status }) {
       const item = myItems.find((item) => item.id === id);
       checkbox.checked = item?.status === "done";
     });
-  }, [filteredItems]);
+  }, [filteredItems, myItems]);
 
   return (
     <div className="overflow-auto">
@@ -43,7 +43,7 @@ export default function TodoList({ myItems, setMyItems, status }) {
           <li
             key={item.id}
             id={item.id}
-            className="mb-1 text-left text-slate-700 hover:opacity-70 flex p-1 rounded-sm transition-colors dark:text-slate-200"
+            className="mb-1 text-left text-slate-700 hover:opacity-70 flex p-1 rounded-sm transition-colors dark:text-slate-200 flex items-center"
           >
             <input
               type="checkbox"

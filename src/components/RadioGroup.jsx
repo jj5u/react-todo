@@ -17,7 +17,7 @@ export default function RadioGroup({
             value={radioValue}
             onClick={handleFilter}
           />
-          <span className=" text-slate-200 peer-checked:font-bold peer-checked:text-slate-50 text-sm whitespace-nowrap ">
+          <span className=" text-slate-200 peer-checked:font-bold peer-checked:text-slate-50 text-sm whitespace-nowrap flex items-center justify-center">
             {labelName} ({item.length})
           </span>
         </label>
